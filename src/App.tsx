@@ -4,11 +4,14 @@ import { useAuth } from "./customHooks/useAuth";
 import LoginPage from "./pages/LoginPage";
 import Dashboard from "./pages/Dashboard";
 import NotFoundPage from "./pages/NotFoundPage";
+import SessionManager from "./components/SessionManager";
 
 const App: React.FC = () => {
   const { user } = useAuth();
 
   return (
+    <>
+    <SessionManager/>
     <Routes>
       <Route
         path="/"
@@ -28,11 +31,8 @@ const App: React.FC = () => {
 
       <Route path = "*" element= {<NotFoundPage/>} />
     </Routes>
+    </>
   )
-
-
-
-
 };
 
 export default App;

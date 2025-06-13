@@ -41,8 +41,8 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
 
         return new Promise<void>((resolve , reject)=>{
             setTimeout(()=>{
-                if(email === "admin@example.com" && password === "password123"){
-                    const loggedInUser = {name: "Anamika" , email};
+                if(email === "krupasindhu.dev@gmail.com" && password === "password123"){
+                    const loggedInUser = {name: "krupasindhu" , email};
                     setUser(loggedInUser);
                     localStorage.setItem("user", JSON.stringify(loggedInUser));
                     resolve();
